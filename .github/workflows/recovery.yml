@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
-  DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
-  DT_PATH: device/tecno/KD7
+  MANIFEST: https://github.com/SHRP/manifest.git -b shrp-12.1
+
+  DT_LINK: https://github.com/Ragekill3377/a02q_twrp_tree_omni
+  DT_PATH: device/samsung/a02q
   TARGET: recoveryimage
   TZ: Asia/manila
 
@@ -62,7 +62,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_10.0
-          name: TWRP-KD7
+          tag_name: SHRP_12.1
+          name: SHRP-Ragekill.a02q
           files: | 
-            work/out/target/product/KD7/recovery.img
+            work/out/target/product/a02q/recovery.img
